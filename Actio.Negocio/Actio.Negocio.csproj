@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4BEC26FA-8935-49CF-BBFB-ABD0D71586D6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Actio.Negocio</RootNamespace>
+    <AssemblyName>Actio.Negocio</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\Referencias\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\Y3\YConta\Referencias\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UOL.PagSeguro">
+      <HintPath>..\Referencias\UOL.PagSeguro.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcessoDados.cs" />
+    <Compile Include="Artigos.cs" />
+    <Compile Include="Artigo_Autor.cs" />
+    <Compile Include="Banner_loja.cs" />
+    <Compile Include="Busca.cs" />
+    <Compile Include="Carrinho.cs" />
+    <Compile Include="Cliente.cs" />
+    <Compile Include="ClienteCSV.cs" />
+    <Compile Include="Clientes.cs" />
+    <Compile Include="clsOptions.cs" />
+    <Compile Include="clsPoll.cs" />
+    <Compile Include="clsUtil.cs" />
+    <Compile Include="Banner.cs" />
+    <Compile Include="BannerP.cs" />
+    <Compile Include="CapelaVirtual.cs" />
+    <Compile Include="Coordenador_GO.cs" />
+    <Compile Include="Agenda.cs" />
+    <Compile Include="Marca.cs" />
+    <Compile Include="GrupodeOracao.cs" />
+    <Compile Include="Produtos.cs" />
+    <Compile Include="Produtos_Avaliacao.cs" />
+    <Compile Include="Produtos_Categoria.cs" />
+    <Compile Include="Produtos_Comprados.cs" />
+    <Compile Include="Produtos_Descricao.cs" />
+    <Compile Include="Produtos_Estoque.cs" />
+    <Compile Include="Produtos_Fotos.cs" />
+    <Compile Include="Produtos_Itens_Pedido.cs" />
+    <Compile Include="Produtos_Sub_Categoria.cs" />
+    <Compile Include="Produtos_Vendas.cs" />
+    <Compile Include="Produto_Finaliza.cs" />
+    <Compile Include="Santo.cs" />
+    <Compile Include="Links.cs" />
+    <Compile Include="Publicacao.cs" />
+    <Compile Include="Venda.cs" />
+    <Compile Include="Videos.cs" />
+    <Compile Include="Noticias_Comentarios.cs" />
+    <Compile Include="Foto.cs" />
+    <Compile Include="Foto_Album.cs" />
+    <Compile Include="Foto_Categoria.cs" />
+    <Compile Include="depoimento.cs" />
+    <Compile Include="Equipe.cs" />
+    <Compile Include="Historico.cs" />
+    <Compile Include="Noticias.cs" />
+    <Compile Include="Sociais.cs" />
+    <Compile Include="Textos.cs" />
+    <Compile Include="Textos_Categoria.cs" />
+    <Compile Include="UploadDetail.cs" />
+    <Compile Include="Usuario_Recursos.cs" />
+    <Compile Include="Recursos.cs" />
+    <Compile Include="Usuarios.cs" />
+    <Compile Include="conexao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

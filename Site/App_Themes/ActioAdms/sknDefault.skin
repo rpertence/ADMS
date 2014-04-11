@@ -1,0 +1,176 @@
+﻿<%--
+Grid view ADMS
+--%>
+<asp:GridView runat="server" BackColor="LightGoldenrodYellow" GridLines="None" BorderStyle="NotSet" Font-Name="Arial" > 
+   <AlternatingRowStyle ForeColor="Black" BackColor="#FCEFC9" Font-Size="11px" />
+   <RowStyle ForeColor="Black" BackColor="#DBDBDB" Font-Size="11px" HorizontalAlign="Left" />
+   <EditRowStyle BackColor="#FEEBA9" ForeColor="#000000" />
+   <SelectedRowStyle BackColor="#FEEBA9" Font-Bold="True" ForeColor="#000000" />
+   <FooterStyle BackColor="#3A5D36" Font-Bold="True" ForeColor="White" />
+   <HeaderStyle BackColor="#E4DAC5" Height="30px" Font-Size="12px" ForeColor="#3E332C" />
+   <PagerStyle BackColor="#3A5D36" ForeColor="White" HorizontalAlign="Center" />
+   <EmptyDataRowStyle BackColor="#FFFFFF" BorderStyle="Solid" BorderWidth="1px" />
+</asp:GridView>
+<%--Grid view ADMS--%>
+
+<%-- Datails View--%>
+<asp:DetailsView runat="server" BackColor="LightGoldenrodYellow" GridLines="None" BorderStyle="NotSet" Font-Name="Arial" >   
+   <AlternatingRowStyle ForeColor="Black" BackColor="#FCEFC9" Font-Size="11px" />
+   <RowStyle ForeColor="Black" BackColor="#DBDBDB" Font-Size="11px" HorizontalAlign="Left" />
+   <EditRowStyle BackColor="#FEEBA9" ForeColor="#000000" />
+   <FooterStyle BackColor="#3A5D36" Font-Bold="True" ForeColor="White" />
+   <HeaderStyle BackColor="#E4DAC5" Font-Size="12px" ForeColor="#3E332C" />
+   <PagerStyle BackColor="#3A5D36" ForeColor="White" HorizontalAlign="Center" />
+   <EmptyDataRowStyle BackColor="#FFFFFF" BorderStyle="Solid" BorderWidth="1px" />
+</asp:DetailsView>
+<%-- Datails View--%>
+<%--Botão azul Padrão--%>
+<asp:Button 
+    runat="server"
+    Font-Names="Verdana" 
+    Font-Size="10px" 
+    ForeColor="#FFFFFF"     
+    BackColor="#546C9C" 
+    BorderColor="#BDBDBD" 
+    BorderStyle="Solid"
+>
+</asp:Button>
+<%--Botão azul--%>
+<asp:Button 
+    SkinId="ButtonAzul"
+    runat="server"
+    Font-Names="Verdana" 
+    Font-Size="10px" 
+    ForeColor="#FFFFFF"     
+    BackColor="#546C9C" 
+    BorderColor="#BDBDBD" 
+    BorderStyle="Solid"
+>
+</asp:Button>
+<%--Botão azul--%>
+<asp:Button 
+    SkinId="ButtonPreto"
+    runat="server"
+    Font-Names="Trebuchet MS" 
+    Font-Size="13px" 
+    ForeColor="#FFFFFF"     
+    BackColor="#000000" 
+    BorderColor="#BDBDBD" 
+    BorderStyle="Solid"
+>
+</asp:Button>
+<%--   Botão azul   --%>
+<%--   Imagem Buttom voltar   --%>
+<asp:ImageButton 
+    ImageUrl="botoes/retornar.png" 
+    SkinID="ibt_Voltar"
+    ToolTip="voltar para listagem dos itens" 
+    ImageAlign="Middle"
+    runat="server" 
+/>
+<%--   Imagem Buttom adicionar   --%>
+<%--   Imagem Buttom adicionar   --%>
+<asp:ImageButton 
+    ImageUrl="botoes/adicionar.png" 
+    SkinID="ibt_NovoItem"
+    ToolTip="adicionar um novo item" 
+    ImageAlign="Middle"
+    runat="server" 
+/>
+<%--   Imagem Buttom adicionar   --%>
+<%--   Imagem Buttom cancelar   --%>
+<asp:ImageButton 
+    ImageUrl="botoes/cancelar.png" 
+    SkinID="ibt_CancelarItem"
+    ToolTip="voltar para a listagem de itens cadastrados" 
+    ImageAlign="Middle"
+    runat="server" 
+/>
+<%--   Imagem Buttom cancelar   --%>
+<%--   Imagem Buttom salvar   --%>
+<asp:ImageButton 
+    ImageUrl="botoes/salvar.png" 
+    SkinID="ibt_SalvarItem"
+    ToolTip="Incluir estes dados na base" 
+    ImageAlign="Middle"
+    runat="server" 
+/>
+<%--   Imagem Buttom salvar   --%>
+<%--   Imagem Buttom editar   --%>
+<asp:ImageButton 
+    ImageUrl="botoes/editar.png" 
+    SkinID="ibt_EditarItem"
+    ToolTip="Salvar as alterações na dados na base" 
+    ImageAlign="Middle"
+    runat="server" 
+/>
+<%--   Imagem Buttom editar   --%>
+<%--   Imagem Buttom excluir   --%>
+<asp:ImageButton 
+    ImageUrl="botoes/excluir.png" 
+    SkinID="ibt_ExcluirItem"
+    ToolTip="Excluir este item da dados na base" 
+    ImageAlign="Middle"
+    runat="server" 
+/>
+<%--   Imagem Buttom excluir   --%>
+<%--   Imagem Buttom vazio   --%>
+<asp:Image
+    ImageUrl="botoes/vazio.png" 
+    SkinID="img_Vazio"
+    ToolTip="Não há registros na dados na base" 
+    ImageAlign="Middle"
+    runat="server" 
+/>
+<%--   Imagem Buttom vazio   --%>
+<%--   RequiredFieldValidator   --%>
+<asp:RequiredFieldValidator runat="server" CssClass="avisos">
+</asp:RequiredFieldValidator>
+<%--   RequiredFieldValidator   --%>
+
+<%--   TextBox para Data   --%>
+<asp:TextBox 
+    SkinId="Data"
+    runat="server"
+    onkeyup="formataData (this,event)" 
+    >
+</asp:TextBox>
+
+<%--   TexBox para Data   --%>
+
+<%--   TextBox para Dinheiro   --%>
+<asp:TextBox 
+    SkinId="Dinheiro"
+    runat="server"
+    onkeyup="formataValor (this,event)"
+    > 
+</asp:TextBox>
+
+<%--   TexBox para Dinheiro   --%>
+
+<%--   TextBox para inteiros   --%>
+<asp:TextBox 
+    SkinId="Inteiros"
+    runat="server"
+    onkeyup="formataInteiro (this,event)"
+    > 
+</asp:TextBox>
+
+<%--   TexBox para inteiros   --%>
+<%--   TextBox para telefone   --%>
+<asp:TextBox 
+    SkinId="Telefone"
+    runat="server"
+    onkeyup="formataTelefone (this,event)"
+    > 
+</asp:TextBox>
+<%--   TexBox para telefone   --%>
+<%--   TextBox para CEP   --%>
+<asp:TextBox 
+    SkinId="CEP"
+    runat="server"
+    onkeyup="formataCEP (this,event)"
+    > 
+</asp:TextBox>
+
+<%--   TexBox para telefone   --%>
